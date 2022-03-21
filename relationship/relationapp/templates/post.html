@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>blog detail</title>
+    <style>
+table, th, td {
+  border: 1px solid red ;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+}
+table {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 2px;
+  border-color: gray;
+}
+</style>
+</head>
+<body>
+
+
+
+<!-- USER area -->
+<h1> post Table with many to one relation : - </h1><br>
+<div class="table-responsive">
+  <table class="table align-middle" style="background-color:#109952">
+    <thead>
+    <tr>
+        <th scope="col">TITLE</th>
+        <th scope="col">USER</th>
+        <th scope="col">CAT</th>
+        <th scope="col">DATE</th>
+
+    </tr>
+  </thead>
+        <tbody>
+        {% for stu in po %}
+        <tr>
+            <td>{{stu.title}}</td>
+             <td>{{stu.user}}</td>
+             <td>{{stu.cat}}</td>
+             <td>{{stu.date}}</td>
+
+
+
+        </tr>
+        {% endfor %}
+        </tbody>
+  </table>
+</div><hr>
+
+
+
+</body>
+</html>

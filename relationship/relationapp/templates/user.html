@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>blog detail</title>
+    <style>
+table, th, td {
+  border: 1px solid red ;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+}
+table {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 2px;
+  border-color: gray;
+}
+</style>
+</head>
+<body>
+
+
+
+
+<!-- USER area -->
+<h1> USER Table : - </h1><br>
+<div class="table-responsive">
+  <table class="table align-middle" style="background-color:#109952">
+    <thead>
+    <tr>
+<!--        <th scope="col">ID </th>-->
+        <th scope="col">NAME</th>
+        <th scope="col">FNAME</th>
+        <th scope="col">LNAME</th>
+        <th scope="col">EMAIL</th>
+
+    </tr>
+  </thead>
+        <tbody>
+        {% for stu in u %}
+        <tr>
+<!--            <td>{{stu.id}}</td>-->
+            <td>{{stu.username}}</td>
+             <td>{{stu.first_name}}</td>
+             <td>{{stu.last_name}}</td>
+             <td>{{stu.email}}</td>
+
+
+
+        </tr>
+        {% endfor %}
+        </tbody>
+  </table>
+</div><hr>
+
+
+</body>
+</html>

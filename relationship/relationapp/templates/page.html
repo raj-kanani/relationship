@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>blog detail</title>
+    <style>
+table, th, td {
+  border: 1px solid red ;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+}
+table {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 2px;
+  border-color: gray;
+}
+</style>
+</head>
+<body>
+
+
+
+<!-- USER area -->
+<h1> page Table with one to one relation : - </h1><br>
+<div class="table-responsive">
+  <table class="table align-middle" style="background-color:#109952">
+    <thead>
+    <tr>
+        <th scope="col">PAGENAME</th>
+        <th scope="col">PAGE_CAT</th>
+        <th scope="col">DATE</th>
+        <th scope="col">USER</th>
+
+    </tr>
+  </thead>
+        <tbody>
+        {% for stu in pa %}
+        <tr>
+            <td>{{stu.page_name}}</td>
+             <td>{{stu.page_cat}}</td>
+             <td>{{stu.date}}</td>
+             <td>{{stu.user}}</td>
+
+
+
+        </tr>
+        {% endfor %}
+        </tbody>
+  </table>
+</div><hr>
+
+
+</body>
+</html>
